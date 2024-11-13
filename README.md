@@ -1,6 +1,6 @@
 that is Out Law Inspired Hud work on qb 
 
-Preview :
+
 ![image](https://github.com/user-attachments/assets/8727cc4d-e364-403f-a3d3-af169d7fff05)
 
 
