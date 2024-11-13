@@ -9,10 +9,12 @@ to import this scrit
 firstly put in [qb] folder
 
 secondly open qb-smallresources / fxmanifest . lua and put this code
+
 exports {
     'HasHarness',
     'HasSeatbelt'
 }
+
 go qb-smallresources / client / seatbelt and search for this code 
 
 function SeatBeltLoop()
