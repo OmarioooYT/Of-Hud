@@ -1,0 +1,764 @@
+/* hud.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* transition: 1.5s ; */
+
+}
+
+body {
+    /* background-color: rgba(0, 0, 0, 0.725); */
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.hud-main {
+    position: absolute;
+    width: 700px; /* Increased width to accommodate more boxes */
+    height: 50px;
+    bottom: 10px;
+    left: 35px;
+    display: none;
+    gap: 10px;
+    align-items: center;
+}
+
+.box-hud {
+    position: relative;
+
+    background-color: #191B1F;
+    height: 46px;
+    width: 46px;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* text-align: center; */
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.box-hud i {
+    font-size: 22px;
+    background-color: #22252A;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    z-index: 999;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin-top: 3.4px;
+}
+
+.hud {
+    font-size: 20px;
+    background-color: #22252A;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    z-index: -9999999999999999999999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    width: 52px;
+  }
+
+.svg-test {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
+    height: 100%;
+    bottom: -47px;
+    width: 100%;
+    transition: 0.9s;
+
+}
+
+.pressent {
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(38, 148, 148);
+    height: 100%;
+    width: 100%;
+    /* top: 97%; */
+    transition: 0.9s;
+    
+}
+
+ .svg-test:hover {
+    height: 150%;
+} 
+
+/* HUD Colors */
+#mic-pressent {
+    background-color: #B1B1B1;
+}
+#eat-pressent {
+    background-color: #D59E44;
+}
+#water-pressent {
+    background-color: #448699;
+}
+#strees-pressent {
+    background-color: #D61010;
+}
+#walk-pressent {
+    background-color: #D4713C;
+}
+#armor-pressent {
+    background-color: #3254D3;
+}
+#health-pressent {
+    background-color: #28AA4A;
+}
+#oxygen-pressent {
+  background-color: #7bb0be;
+}
+
+
+/* Hud Car */
+.street-continer{
+    position: absolute;
+    bottom: 25%;
+    left: 0.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 200;
+    width: 350px;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 5px;
+}
+
+.svg-car{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
+    height: 100%;
+    /* bottom: -39px; */
+    width: 40px;
+    transition: 0.9s;
+}
+.svg-pressent-car{
+       /* position: absolute; */
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-color: rgb(38, 148, 148);
+       height: 100%;
+       width: 100%;
+       top: 97%;
+       transition: 0.9s;
+}
+
+.street-label{
+    /* clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%, 4% 50%); */
+    clip-path: polygon(100% 0%,  96% 52%, 100% 100%, 0 100%, 4% 50%, 0 0);
+
+    padding: 4px;
+    text-align: start;
+    width: 70%;
+    /* height: 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E2125;
+}
+
+.streeat-name{
+    margin-left: 15px;
+    white-space: nowrap;
+overflow: hidden;
+max-width: 57%;
+font-weight: 400;
+padding: 1px;
+}
+
+.waypoint{
+font-weight: 400;
+}
+
+
+/* RPM Right Car HUD */
+.fuel-circle{
+    position: relative;
+    background-color: #1E2125;
+    outline: #1E2125 solid 2px;
+    height: 42px;
+    width: 41px;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5px;
+    align-items: center;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.hudcar{
+    background-color: #1E2125;
+    height: 47px;
+    width: 47px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(50% at 50% 50%);
+
+}
+
+.seat-circle{
+    position: absolute;
+    /* background-color: #1E2125; */
+    /* outline: #1E2125 solid 2px; */
+    bottom: 70%;
+    left: 2.5%;
+    color: #e04646;
+    text-shadow: red 1px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    font-size: 25px;
+    animation: beat .25s infinite alternate;
+}
+
+
+.fuel-circle i {
+    outline: #1E2125 solid 2px;
+    background-color: #1E2125;
+    clip-path: circle(50% at 50% 50%);
+    z-index: 999;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 37px;
+    margin-top: 2px;
+font-size: 20px;
+}
+.svg-fuel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
+    height: 100%;
+    bottom: -40px;
+    width: 41px;
+    transition: 0.9s;
+}
+
+.svg-pressent-fuel{
+   /* position: absolute; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #D9A430;
+   height: 100%;
+   width: 100%;
+   /* top: 97%; */
+   transition: 0.9s;
+   outline: #1E2125 solid 2px;
+}
+
+/* Engine */
+
+.engine-circle{
+    position: relative;
+    background-color: #1E2125;
+    outline: #1E2125 solid 2px;
+    height: 42px;
+    width: 41px;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5px;
+    align-items: center;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.engine-circle i {
+    outline: #1E2125 solid 2px;
+    background-color: #1E2125;
+    clip-path: circle(50% at 50% 50%);
+    z-index: 999;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 37px;
+    margin-top: 2px;
+}
+.svg-engine{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
+    height: 100%;
+    bottom: -40px;
+    width: 41px;
+    transition: 0.9s;
+}
+
+.svg-pressent-engine{
+   /* position: absolute; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #518E60;
+   height: 100%;
+   width: 100%;
+   /* top: 97%; */
+   transition: 0.9s;
+}
+
+
+
+.hud-rpm-fuel-engine{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 55px;
+    margin-right: 10px;
+}
+.hud-rpm{
+    position:absolute;
+    bottom: 100px;
+    left: 350px;
+    width: 200px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+/* Gear */
+.gear{
+    background: #1E2125;
+    border: #26cad4 solid 2px;
+    outline: #1E2125 solid 2px;
+    /* padding: 15px; */
+    font-size: 17px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: 25px;
+    font-weight: 700;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+}
+.gear h3 {
+    position: absolute;
+}
+/* .gear-partent{
+    border-radius: 50%;
+
+    width: 85%;
+    height: 85%;
+    border: 2.5px solid #3CBCB8;
+} */
+.first-hud-rpm-lablels{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    text-shadow: rgba(0, 0, 0, 0.589) 1px 0 5px;
+    width: 50px;
+}
+
+.km{
+    position: relative;
+    bottom: 3%;
+    left: 50%;
+    transition: margin-right 2s ease-in-out;
+    font-size: 55px;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: var(--main-border) 1px 0 3px;
+}
+
+.label-kmh{
+    position: relative;
+    bottom: 0%;
+    left: 55%;
+    transition: 1.5s;
+    font-size: 13px;
+}
+
+.hud-rpm-lables-and-segemets{
+    position: relative;
+    right: 5%;
+    bottom: -50px;
+    display: flex;
+    gap: 30px;
+}
+
+
+
+/* Seegements */
+.hud-seggemts{
+    height: 15%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0376c9; */
+    gap: 3.5px;
+    margin-top: 10px;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+}
+
+.hud-rpm{
+    /* background-color: #25CC98; */
+    width: 400px;
+}
+.seggement{
+    width: 9px;
+    height: 16px;
+    background-color: #171214;
+}
+.seggement{
+    /* position: absolute; */
+    /* height: 100%; */
+    /* width: 100%; */
+    background-color: #181B1D;
+    box-shadow: 0px 0px 5px 0px var(--main-border);
+}
+.hud-first{
+    display: flex;
+}
+
+.coords {
+    justify-content: center;
+    align-items: center;
+    background-color: #1E2125;
+    display: flex;
+      width: 3.3em;
+      height: 3.0em;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+
+
+.right {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #26cad4;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+    display: flex;
+      width: 3em;
+      height: 2.7em;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  font-size: 1rem;
+  }
+  
+  .right:before {
+    position: absolute;
+    background-color: #1E2125;
+    content: "";
+    display: block;
+      width: 2.6em;
+      height: 2.4em;
+  
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    z-index: -1;
+  }
+  
+  .left {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #26cad4;
+    color: whitesmoke;
+    text-shadow: whitesmoke 1px 0 10px;
+    display: flex;
+    width: 3em;
+    height: 2.7em;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  font-size: 1rem;
+  }
+  
+  .left:before {
+    position: absolute;
+    background-color: #1E2125;
+    content: "";
+    display: block;
+    width: 2.6em;
+    height: 2.4em;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    z-index: -1;
+  }
+
+  .filled {
+    background-color: #27C8D2 ;
+  }
+  
+  .between {
+    background-color: #CA8E2A ;
+  }
+  
+  .critical {
+    background-color: #CE2938 ;
+  }
+
+  .lowwa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: walk 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        height: 100%;
+        width: 100%;
+        transition: 0.9s;
+  }
+
+  .lowh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: health 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    height: 100%;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.lowf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: eat 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    height: 100%;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.loww {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: water 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    height: 100%;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.lows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: stress 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    height: 100%;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.lowengine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: engine 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  height: 100%;
+  width: 100%;
+  transition: 0.9s;
+}
+
+.lowfuel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fuel 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  height: 100%;
+  width: 100%;
+  transition: 0.9s;
+}
+
+.lowarmor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: armor 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  height: 100%;
+  width: 100%;
+  transition: 0.9s;
+}
+
+
+.lowox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: oxygen 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  height: 100%;
+  width: 100%;
+  transition: 0.9s;
+}
+
+@keyframes oxygen {
+  0% {
+    background: #A52E2E;
+  }
+  50% {
+      background-color: #7bb0be;
+  }
+  100% {
+    background: #A52E2E;
+  }
+}
+
+@keyframes armor {
+  0% {
+    background: #A52E2E;
+  }
+  50% {
+      background-color: #3254D3;
+  }
+  100% {
+    background: #A52E2E;
+  }
+}
+
+@keyframes fuel {
+  0% {
+    background: #A52E2E;
+  }
+  50% {
+      background-color: #D9A430;
+  }
+  100% {
+    background: #A52E2E;
+  }
+}
+
+@keyframes engine {
+  0% {
+    background: #A52E2E;
+  }
+  50% {
+      background-color: #518E60;
+  }
+  100% {
+    background: #A52E2E;
+  }
+}
+
+  @keyframes health {
+    0% {
+      background: #A52E2E;
+    }
+    50% {
+        background-color: #28AA4A;
+    }
+    100% {
+      background: #A52E2E;
+    }
+  }
+
+  @keyframes eat {
+    0% {
+      background: #A52E2E;
+    }
+    50% {
+        background-color: #D59E44;
+    }
+    100% {
+      background: #A52E2E;
+    }
+  }
+
+  @keyframes water {
+    0% {
+      background: #A52E2E;
+    }
+    50% {
+        background-color: #448699;
+    }
+    100% {
+      background: #A52E2E;
+    }
+  }
+
+  @keyframes stress {
+    0% {
+      background: #A52E2E;
+    }
+    50% {
+        background-color: #D61010;
+    }
+    100% {
+      background: #A52E2E;
+    }
+  }
+
+  @keyframes walk {
+    0% {
+      background: #A52E2E;
+    }
+    50% {
+        background-color: #D4713C;
+    }
+    100% {
+      background: #A52E2E;
+    }
+  }
+
+  @keyframes beat{
+    to { transform: scale(1.1); }
+  }

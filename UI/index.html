@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Ovo&family=Press+Start+2P&family=Source+Sans+Pro&family=VT323&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.5.0/css/pro.min.css">
+    <link rel="stylesheet" href="svgTimer.min.css">
+
+</head>
+
+<body>
+
+    <audio id="gps" src="gps.mp3"></audio>
+
+    <div class="hud-main">
+
+        <div class="hud">
+        <div class="box-hud" id="mic">
+            <!-- <i class="fa-sharp fas fa-microphone-slash" id="Mic-Icon"></i> -->
+            <i class="fa-sharp fa-light fa-microphone-slash" id="Mic-Icon"></i>
+            <div class="svg-test" id="svg-mic">
+                <div class="pressent" id="mic-pressent">
+                </div>
+            </div>
+        </div>
+        </div>
+    
+        <div class="hud" id="healthhud">
+        <div class="box-hud" id="health">
+            <i class="fa-light fa-notes-medical"></i>
+            <div class="svg-test" id="svg-health">
+                <div class="pressent" id="health-pressent">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="hud" id="armorhud">
+        <div class="box-hud" id="armor">
+            <i class="fas fa-shield-quartered"></i>
+            <div class="svg-test" id="svg-armor">
+                <div class="pressent" id="armor-pressent">
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="hud">
+        <div class="box-hud" id="eat">
+            <i class="fa-light fa-meat"></i>
+            <div class="svg-test" id="svg-eat">
+                <div class="pressent" id="eat-pressent">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="hud">
+        <div class="box-hud" id="water">
+            <i class="fa-light fa-bottle-water"></i>
+            <div class="svg-test" id="svg-water">
+                <div class="pressent" id="water-pressent">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="hud" id="streeshud">
+        <div class="box-hud" id="strees">
+            <i class="fa-light fa-example"></i>
+            <img src = "brain.svg" style="z-index: 999999999999; position: absolute; bottom: -17px;    text-shadow: red 1px 0 10px; margin-left: 13px; width: 70px; height: 70px;"/>
+            <div class="svg-test" id="svg-strees">
+                <div class="pressent" id="strees-pressent">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="hud" id="walkhud">
+        <div class="box-hud" id="walk">
+            <i class="fas fa-person-walking"></i>
+            <div class="svg-test" id="svg-walk">
+                <div class="pressent" id="walk-pressent">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="hud" id="oxygenhud">
+            <div class="box-hud" id="oxygen">
+                <i class="fa-regular fa-face-exhaling"></i>
+                <div class="svg-test" id="svg-oxygen">
+                    <div class="pressent" id="oxygen-pressent">
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="hud-car" style="display: none;">
+        <div class="street-continer">
+
+            <div class="coords">
+            <div class="right">
+                <i class="fa-regular fa-map-location-dot"></i>
+            </div>
+            </div>
+
+            <div class="street-label">
+                <h4 class="streeat-name">Sinner St</h4>
+                <h4 class="waypoint" style="margin-right: 15px;">--</h4>
+            </div>
+
+            <div class="coords">
+            <div class="left">
+                <i class="fa-sharp fa-solid fa-location-crosshairs-slash"></i>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="hud-rpm">
+      
+            <div class="hud-first">
+                <div class="hud-rpm-fuel-engine">
+                    <div class="seat-circle">
+                        <img src = "seatbelt.svg" style="width: 25px; height: 30px;"/>
+                    </div>
+                    <div class="hudcar">
+                    <div class="fuel-circle">
+                        <i class="fa-light fa-gas-pump"></i>
+                        <div class="svg-fuel" id="svg-fuel">
+                            <div class="svg-pressent-fuel" id="svg-pressent-fuel">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- <div class="engine-circle">
+                        <i class="fa-light fa-engine"></i>
+    
+                    </div> -->
+                    <div class="hudcar">
+                    <div class="engine-circle">
+                        <i class="fa-light fa-engine"></i>
+                        <div class="svg-engine" id="svg-engine">
+                            <div class="svg-pressent-engine" id="svg-pressent-engine">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+    
+                <div class="hud-rpm-lables-and-segemets">
+                    <div class="first-hud-rpm-lablels">
+                        <h5 class="label-kmh">KM/H</h5>
+                        <h1 class="km">001</h1>
+                    </div>
+                    <div class="gear">
+                        <h3 class="gear-label">R</h3>
+                        <!-- <div class="gear-partent"></div> -->
+                    </div>
+                </div>
+    
+            </div>
+
+
+            <div class="hud-seggemts" id="rpmBar">
+                
+                <div class="seggement" style="margin-bottom: 0px;margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 1.6px; margin-right: 0px; transform: rotate(-3deg);"><div class="inner-seggement"></div></div>
+                <!-- Curve -->
+                <div class="seggement" style="margin-bottom: 4px; margin-right: 0px; transform: rotate(-15deg);"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 13px; position: relative; left: 0.5%; transform: rotate(-30deg);"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="position: absolute; right: 19%; margin-bottom: 30px; margin-right: 0px; transform: rotate(-45deg);"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 52px; position: absolute; right: 16%; transform: rotate(-65deg);"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 80px; position: absolute; right: 14.5%; transform: rotate(-80deg);"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 107px; position: relative; right: -5%; margin-right: 0px; transform: rotate(-90deg);"><div class="inner-seggement"></div></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
